@@ -1,65 +1,86 @@
-# error-sound-alert README
+# Error Sound Alert 🔊
 
-This is the README for your extension "error-sound-alert". After writing up a brief description, we recommend including the following sections.
+**Error Sound Alert** is a Visual Studio Code extension that plays a sound whenever a terminal command fails or a runtime error occurs.
 
-## Features
+Instead of silently missing errors in the terminal, this extension immediately alerts you with a sound so you can notice the failure quickly.
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+Currently the extension plays the viral Arpit Bala audio:
 
-For example if there is an image subfolder under your extension project workspace:
+> "Ye Bk*, ye jaha bhi dikhta hain gussa boht ata hain bhai"
 
-\!\[feature X\]\(images/feature-x.png\)
-
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
-
-## Requirements
-
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
-
-## Extension Settings
-
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
-
-This extension contributes the following settings:
-
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
-
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
-
-## Release Notes
-
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
+whenever a command exits with an error.
 
 ---
 
-## Working with Markdown
+## ✨ Features
 
-You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
+* 🔊 Plays an audio alert when a terminal command fails
+* 🐍 Works great when running Python scripts that throw runtime errors
+* 🖥️ Detects terminal exit codes automatically
+* 🚫 Prevents multiple sound triggers for the same error
 
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets
+Example:
 
-## For more information
+```python
+print(1/0)
+```
 
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
+When this produces a runtime error, the extension immediately plays the alert sound.
 
-**Enjoy!**
+---
+
+## ⚙️ Requirements
+
+No additional setup required.
+
+Just install the extension and run code in the terminal normally.
+
+---
+
+## 📦 Installation
+
+Once published, install directly from the Visual Studio Code Marketplace or using:
+
+```
+code --install-extension error-sound-alert
+```
+
+---
+
+## 🚀 Usage
+
+1. Run a program in the VS Code terminal
+2. If the command fails or exits with a non-zero status
+3. The extension automatically plays the alert sound
+
+---
+
+## ⚠️ Known Issues
+
+* Sound alerts currently trigger for any terminal command failure
+* Some shells may delay detection slightly depending on shell integration
+
+---
+
+## 📝 Release Notes
+
+### 1.0.0
+
+Initial release of **Error Sound Alert**
+
+* Detect terminal command failures
+* Play alert sound automatically
+
+---
+
+## 💻 Source Code
+
+GitHub Repository:
+
+https://github.com/Suman-byte8/Vscode-Audio-Extension
+
+---
+
+## 🎉 Enjoy!
+
+Happy coding — and never miss an error again.

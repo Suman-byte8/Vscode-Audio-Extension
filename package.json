@@ -1,7 +1,8 @@
 {
-  "name": "error-sound-alert",
-  "displayName": "error-sound-alert",
+  "name": "apit-bala-error-alert",
+  "displayName": "Arpit Bala Error Alert",
   "description": "",
+  "publisher": "suman-dev",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.109.0"
@@ -13,6 +14,8 @@
   "categories": [
     "Other"
   ],
+  "icon": "arpit_bala.ico",
+  "logo": "arpit_bala.ico",
   "activationEvents": [
     "*"
   ],
@@ -38,5 +41,7 @@
     "@vscode/test-electron": "^2.5.2",
     "eslint": "^9.39.3"
   },
-  "dependencies": {}
+  "dependencies": {
+    "@vscode/vsce": "^3.7.1"
+  }
 }
